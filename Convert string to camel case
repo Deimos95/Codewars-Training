@@ -1,0 +1,15 @@
+def to_camel_case(text):
+    indices=[index+1 for (index, c) in enumerate(text) if c == "-" or c=="_"]
+    res = ''
+    for idx in range(0, len(text)):
+        if idx in indices:
+            res += text[idx].upper()
+        else:
+            res += text[idx]
+    res=res.replace('-','')
+    res=res.replace('_','')
+
+    return res
+
+
+print(to_camel_case('a-pippi_was-evil'))
