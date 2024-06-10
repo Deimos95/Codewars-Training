@@ -1,0 +1,14 @@
+def digital_root(n):
+    
+    c=str(n)
+    s=0
+    for i in c:
+        s+=int(i)
+    if s<10:
+        return s
+    else:
+        return digital_root(s)
+        
+        
+    
+print(digital_root(942))
