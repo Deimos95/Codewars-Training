@@ -1,0 +1,10 @@
+import re
+def count_smileys(arr):
+    count=0
+    for text in arr:
+        x = re.search(r"[:;][-~]?[)D]", text)
+        if x:
+            count+=1
+    return count
+     #the number of valid smiley faces in array/list
+print(count_smileys([':)', ';(', ';}', ':-D']))
