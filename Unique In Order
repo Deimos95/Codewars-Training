@@ -1,0 +1,20 @@
+def unique_in_order(sequence):
+    """
+    Removes consecutive duplicate elements from a sequence while preserving order.
+
+    Args:
+        sequence (iterable): A sequence (string, list, etc.) containing elements.
+
+    Returns:
+        list: A new list with consecutive duplicates removed.
+    """
+    unique_list = []
+    for item in sequence:
+        if not unique_list or item != unique_list[-1]:
+            unique_list.append(item)
+    return unique_list
+
+# Example usage:
+input_string = "AAABBBCCCDDEEE"
+result_list = unique_in_order(input_string)
+print(result_list)  # Output: ['A', 'B', 'C', 'D', 'E']
