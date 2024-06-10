@@ -1,0 +1,16 @@
+def find_outlier(integers):
+    c=[]
+    for integer in integers:
+        if integer%2==0:
+            c.append(True)
+        else:
+            c.append(False)
+    if c.count(True)==1:
+        return integers[c.index(True)]
+    else:
+        return integers[c.index(False)]
+    
+    
+        
+            
+print(find_outlier([2, 4, 6, 8, 10, 3]))
