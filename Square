@@ -1,0 +1,11 @@
+def is_square(n):
+      for i in range(n+1):
+            while n==i**2:
+                return True
+                break
+           
+    return False
+        
+ 
+    
+print(is_square(81))
