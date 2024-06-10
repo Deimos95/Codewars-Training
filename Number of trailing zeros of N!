@@ -1,0 +1,8 @@
+def zeros(n):
+    zeros_count = 0
+    while n >= 5:
+        n //= 5
+        zeros_count += n
+        print(n)
+    return zeros_count
+print(zeros(250))
