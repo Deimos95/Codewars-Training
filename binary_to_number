@@ -1,0 +1,8 @@
+def binary_array_to_number(arr):
+    r=0
+    for i in range(len(arr)):
+        if arr[i]==1:
+            r+= 2**(abs(i-len(arr))-1)
+            
+    return(r)
+print(binary_array_to_number([0,1,0,1]))
