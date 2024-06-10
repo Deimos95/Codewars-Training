@@ -1,0 +1,18 @@
+def duplicate_count(text):
+    # Your code goes here
+    list=[]
+    counter=0
+    for c in text.upper():
+        if c in ('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890'):
+            if c not in list:
+                list.append(c)
+            
+    for i in list:
+        if text.upper().count(i)>1:
+            counter+=1
+    return counter
+    
+        
+        
+print(duplicate_count("abcddeee"))
+            
