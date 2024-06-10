@@ -1,0 +1,19 @@
+def sort_array(source_array):
+    odd=[]
+    even=[]
+    indexes  = [index for (index, item) in enumerate(source_array) if item%2==0]
+    for item in source_array:
+        if item%2!=0:
+            odd.append(item)
+            odd.sort()
+                               
+    for i in indexes:
+        odd.insert(i, source_array[i])
+    return odd
+            
+            
+            
+
+
+        
+print(sort_array([2, 39, -5, 46, 28, 30, 36, 46, 2, -3, -46, -47, -47, 28, -6]))
